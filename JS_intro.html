@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var person = {
+            myName : 'Pradeep kumar',
+            email : 'pradeepkumar@gmail.com',
+            mobile : 9533385570,
+        }; 
+        person.city = 'Hyderabad';
+        person.language = 'Telugu';
+
+        person ['city'] = 'Bangalore';
+
+        
+        console.log (person)
+        document.write(person.myName+ "<br>"+person.email+ "<br>" )
+
+        var vehicle = {
+            model : "BMW",
+        }
+        document.write(vehicle.model)
+        console.log(vehicle)
+    </script>
+</body>
+</html>

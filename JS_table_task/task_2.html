@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        var allUsers = [
+    {
+        "fname": "Carman",
+        "lname": "Stallone"
+    },
+    {
+        "fname": "Kefeng",
+        "lname": "Mize"
+    },
+    {
+        "fname": "Juanito",
+        "lname": "Antunes"
+    },
+    {
+        "fname": "Jasper",
+        "lname": "Keirns"
+    },
+    {
+        "fname": "Julius",
+        "lname": "Vasquez"
+    },
+    {
+        "fname": "Terra",
+        "lname": "Penning"
+    },
+    {
+        "fname": "Geeta",
+        "lname": "Knost"
+    },
+    {
+        "fname": "Melody",
+        "lname": "Schemanski"
+    },
+    {
+        "fname": "Brenda",
+        "lname": "Ticona"
+    },
+    {
+        "fname": "Cesalie",
+        "lname": "Schatz"
+    }
+]
+    
+ console.log (allUsers.length)
+
+    allUsers.forEach((user)=>{
+        var myHeading = document.createElement("h1");
+        myHeading.innerHTML = user.fname +" "+ user.lname
+        document.body.appendChild(myHeading)
+    })
+    </script>
+    
+</body>
+</html>
