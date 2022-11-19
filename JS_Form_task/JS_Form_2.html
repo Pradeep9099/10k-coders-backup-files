@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <div style="width: 500px; margin-left: 350px; background-color: bisque; font-size: 25px;">
+        <h2>Address</h2>
+        <hr />
+        <label for="Street"> Street : </label>
+        <input type="text" name="" id="Street" /> <br /><br />
+        <input type="text" name="" id="Street" style="margin-left:80px;"/><br /><br />
+        <label for="City"> City, </label>
+        <label for="State"> State : </label>
+        <input type="text" name="" id="City" />
+        <input type="text" name="" id="State" style="width:50px"/><br /><br />
+        <label for="ZipCode">Zip Code: </label>
+        <input type="text" name="" id="ZipCode" /> <br /><br />
+        <label for="Country"> Country : </label>
+        <input type="text" name="" id="Country" /> <br /><br />
+        <div style="text-align: end; ">
+        <button type="button" onclick="Address()" style="width:90px; height:30px;">OK</button>
+        <button type="button" style="width:90px; height:30px;">Cancel</button>
+        </div>
+    </div>
+    </form>
+    <script>
+        function Address(){
+            var Address={
+                Street:"",
+                City: "",
+                State:"",
+                ZipCode:"",
+                Country:"",
+            }
+            for (a in Address){
+                Address[a]= document.getElementById(a).value
+            }
+            console.log("Address", Address)
+        }
+    </script>
+  </body>
+</html>

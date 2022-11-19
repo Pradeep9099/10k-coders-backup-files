@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th colspan="5">Address</th>
+          <th rowspan="2">ID</th>
+          <th rowspan="2">Email</th>
+          <th rowspan="2">UserName</th>
+          <th rowspan="2">Password</th>
+          <th rowspan="1" colspan="2">Name</th>
+          <th rowspan="2">Phone number</th>
+          <th rowspan="2">Edit</th>
+          <th rowspan="2">Delete</th>
+        </tr>
+        <tr>
+          <th>GeoLocation</th>
+          <th>City</th>
+          <th>Street</th>
+          <th>Number</th>
+          <th>Zip</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="./data_6.js"></script>
+    <script>
+      var fillteredUsers = [];
+      function displayUsers(users) {
+        document.querySelector("tbody").innerHTML = "";
+        users.forEach((user, i) => {
+          // console.log(user)
+          var myTr = document.createElement("tr");
+          for (a in user) {
+            if (a == "address") {
+              var addressObj = user[a];
+              for (b in addressObj) {
+                var myTd = document.createElement("td");
+                if (b !== "geolocation") {
+                  myTd.innerHTML = addressObj[b];
+                  myTr.appendChild(myTd);
+                } else {
+                  var results = "";
+                  for (c in addressObj[b]) {
+                    results += c + " : " + addressObj[b][c] + "<br>";
+                  }
+                  myTd.innerHTML = results;
+                  myTr.appendChild(myTd);
+                }
+              }
+            } else if (a == "name") {
+              for (n in user[a]) {
+                var myTd = document.createElement("td");
+                myTd.innerHTML = user[a][n];
+                myTr.appendChild(myTd);
+              }
+            } else if (a !== "__v") {
+              var myTd = document.createElement("td");
+              myTd.innerHTML = user[a];
+              myTr.appendChild(myTd);
+            }
+          }
+
+          var editTd = document.createElement("td");
+          var editBtn = document.createElement("button");
+          editBtn.innerHTML = "Edit";
+          editTd.appendChild(editBtn);
+          myTr.appendChild(editTd);
+
+          var deleteTd = document.createElement("td");
+          var deleteBtn = document.createElement("button");
+          deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+          deleteBtn.innerHTML = "Delete";
+          deleteTd.appendChild(deleteBtn);
+          myTr.appendChild(deleteTd);
+
+          document.querySelector("tbody").appendChild(myTr);
+        });
+      }
+      function deleteUser(i) {
+        if (fillteredUsers.length == 0) {
+          fillteredUsers = users.filter((user, index) => {
+            return user.id !== users[i].id;
+          });
+        } else {
+          fillteredUsers = fillteredUsers.filter((user, index) => {
+            return user.id !== fillteredUsers[i].id;
+          });
+        }
+        displayUsers(fillteredUsers);
+      }
+      displayUsers(users);
+
+      function editUser() {}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+/* background: #FFC1A7;
+background: -moz-linear-gradient(left, #FFC1A7 0%, #EBF7B2 50%, #FFB8C7 100%);
+background: -webkit-linear-gradient(left, #FFC1A7 0%, #EBF7B2 50%, #FFB8C7 100%); */
+
+#grad5 { background-color: linear-gradient( #FFC1A7, #EBF7B2,#FFB8C7 )";}

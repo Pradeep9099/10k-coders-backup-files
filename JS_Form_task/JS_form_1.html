@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form 1</title>
+    <style>
+      div {
+        background-color: slateblue;
+        height: 600px;
+        color: white;
+        font-size: 25px;
+      }
+      fieldset {
+        width: 80%;
+        margin-left: 150px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form">
+        <fieldset>
+          <legend style="text-align: start">Registration Details</legend>
+          <lable for="University"> University : </lable>
+          <input type="text" name="" id="University" /> <br /><br />
+          <lable for="Institute"> Institute : </lable>
+          <input type="text" name="" id="Institute" /><br /><br />
+          <lable for="Branch"> Branch : </lable>
+        
+          <select name="Branch" id="Branch" style="width: 170px">
+            <option>---------</option>
+            <option>BSc</option>
+            <option>B.Com</option>
+            <option>B.A</option>
+          </select>
+          <br /><br />
+
+          <lable for="Degree" style="padding-left: 250px"> Degree : </lable>
+          <select name="Degree" id="Degree" style="width: 170px">
+            <option>---------</option>
+            <option>Chemistry</option>
+            <option>Commerce</option>
+            <option>Journalism</option>
+          </select>
+          <input type="Radio" name="study" id="Pursuing" />
+          <lable for="Pursuing"> Pursuing </lable>
+          <input type="Radio" name="study" id="Completed" />  Completed
+          <!-- <lable for="Completed"> Completed </lable>  -->
+          <br /><br />
+          <lable for="AvarageCPI" style="padding-left: 150px">
+            Avarage CPI :
+          </lable>
+          <select name="AvarageCPI" id="AvarageCPI" style="width: 50px" min="0" max="15">
+            <option>---------</option>
+            <option>0 to 5</option> 
+            <option>5 to 10</option>
+            <option>10 to 15</option>
+          </select>        
+          <lable for="UpTo"> Upto </lable>
+          <select name="UpTo" id="UpTo" style="width: 50px">
+            <option>---------</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <lable for="UpTo"> Th Semister </lable> <br /><br />
+          <!-- <input type="text" name="" id="AvarageCPI" /><br /><br />  -->
+          <lable for="Experience"> Experience : </lable>
+          <input type="text" name="" id="Experience" /><br /><br />
+          <lable for="Blog"> Your Websit Or Blog : </lable>
+          <input type="text" name="" id="Blog" placeholder="http://"/><br /><br />
+          <button type="button" onclick="getUser()">Submit</button>
+        </fieldset>
+      </form>
+
+      <script>
+        function getUser() {
+          var detail = {
+            University: "",
+            Institute: "",
+            Branch: "",
+            Degree: "",
+            AvarageCPI: "",
+            Experience: "",
+            Blog: "",
+          };
+          for (a in detail) {
+            detail[a] = document.getElementById(a).value
+          }
+          console.log("detail",detail);
+        }
+      </script>
+    </div>
+  </body>
+</html>

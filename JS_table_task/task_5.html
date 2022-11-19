@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        Img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th> ID </th>
+                <th> User ID </th>
+                <th> Date</th>
+                <th> Products </th>
+            </tr>
+            <!-- <tr>
+                <th>Rate</th>
+                <th>Count</th>
+            </tr> -->
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="./data_5.js"></script>
+    <script>       
+            console.log(cart)
+            cart.forEach ((cartItem)=>{
+                console.log(cartItem);
+            var myTr = document.createElement("tr");
+            for (a in cartItem){
+                var myTd = document.createElement("td")
+                if ( a !== "products" && a !== "__v" && a!=="date"){
+                    myTd.innerHTML = cartItem [a]
+                    myTr.appendChild(myTd)
+                }else if (a == "products"){
+                    var productTable = document.createElement("table")
+                    cartItem[a] .forEach((item)=>{
+                        console.log(item);
+                        var myProdTr =document.createElement("tr");
+                        for (c in item){
+                            var myctd =document.createElement("td")
+                            myctd.innerHTML = c + " :"+item[c];
+                            myProdTr.appendChild(myctd);
+                        }
+                        productTable.appendChild(myProdTr);
+                    });
+                    myTd.appendChild(productTable);
+                    myTr.appendChild(myTd)
+                }else if ( a== "date"){
+                    myTd.innerHTML = new Date(cartItem [a]).toDateString ();
+                    myTr.appendChild(myTd)
+                }
+            }
+            document.querySelector("tbody").appendChild(myTr)    
+            })    
+
+    </script>
+    
+</body>
+</html>
