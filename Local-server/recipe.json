@@ -1,0 +1,22 @@
+{
+    "results": [
+      {
+        "id" : "1",
+        "display": "chicken noodle soup",
+        "search_value": "chicken noodle soup",
+        "type": "ingredient"
+      },
+      {
+        "id" : "2",
+        "search_value": "chicken soup",
+        "type": "ingredient",
+        "display": "chicken soup"
+      },
+      {
+        "id" : "3",
+        "type": "ingredient",
+        "display": "chicken tortilla soup",
+        "search_value": "chicken tortilla soup"
+      }
+    ]
+  } 

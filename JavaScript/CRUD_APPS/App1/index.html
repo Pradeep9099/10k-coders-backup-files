@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #formContent {
+        width: 20%;
+        float: left;
+      }
+      #userTable {
+        width: 80%;
+        float: left;
+      }
+      table {
+        width: 100%;
+      }
+      #udpateUserBtn {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="formContent">
+      <form>
+        <label for="university">University : </label>
+        <input type="text" name="" id="university" /> <br />
+
+        <label for="institute">Institute : </label>
+        <input type="text" name="" id="institute" /> <br />
+
+        <label for="branch">Branch</label>
+        <select name="" id="branch">
+          <option value="Civil">Civil</option>
+          <option value="Electrical">Electrical</option>
+          <option value="Mechanical">Mechanical</option>
+          <option value="CS">CS</option>
+          <option value="Communication">Communication</option>
+          <option value="IT">IT</option>
+        </select>
+
+        <br />
+        <label for="degree">Degree </label>
+        <select name="" id="degree">
+          <option value="BE">BE</option>
+          <option value="BTech">BTech</option>
+          <option value="MTech">MTech</option>
+        </select>
+        <br />
+        <label for="staus">Status : </label>
+        <input type="radio" name="status" value="completed" /> Completed
+        <input type="radio" name="status" value="pursuing" /> Pursuing <br />
+
+        <label for="cgpa">CGPA :</label>
+        <input type="number" name="" id="cgpa" /> <br />
+
+        <label for="experience">Experience :</label>
+        <input type="number" name="" id="experience" /> <br />
+
+        <label for="website">Website :</label>
+        <input type="text" name="" id="website" /> <br />
+
+        <label for="doj">Date of Joining </label>
+        <input type="date" name="" id="doj" /> <br />
+
+        <label for="subject">Subjects : </label> <br />
+        <input type="checkbox" name="subject" value="HTML" /> HTML <br />
+        <input type="checkbox" name="subject" value="CSS" /> CSS <br />
+        <input type="checkbox" name="subject" value="Javascript" /> Javascript
+        <br />
+        <input type="checkbox" name="subject" value="ReactJS" /> ReactJS <br />
+
+        <button type="button" onclick="addUser()" id="addUserBtn">
+          Add User
+        </button>
+        <button type="button" onclick="updateUser()" id="udpateUserBtn">
+          Update User
+        </button>
+      </form>
+    </div>
+    <div id="userTable">
+      <table border="1">
+        <thead>
+          <tr>
+            <th>University</th>
+            <th>Institute</th>
+            <th>Branch</th>
+            <th>Degree</th>
+            <th>Status</th>
+            <th>CGPA</th>
+            <th>Experience</th>
+            <th>Website</th>
+            <th>DOJ</th>
+            <th>Subjects</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="./create.js"></script>
+    <script src="./read.js"></script>
+    <script src="./update.js"></script>
+    <script src="./delete.js"></script>
+  </body>
+</html>
