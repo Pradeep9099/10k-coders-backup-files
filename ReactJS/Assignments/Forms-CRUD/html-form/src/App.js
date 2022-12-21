@@ -1,10 +1,11 @@
-import Registration from "./Components/Registration";
+import HTML from "./Components/HTML";
 
 
 function App() {
   return (
     <div className="App">
-     <Registration/>
+      <h1> HTML FORM</h1>
+    <HTML/>
     </div>
   );
 }

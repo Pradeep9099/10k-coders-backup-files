@@ -1,10 +1,10 @@
-import Registration from "./Components/Registration";
-
+import Address from "./Components/Address";
 
 function App() {
   return (
     <div className="App">
-     <Registration/>
+      <h1> ADDRESS</h1> <hr/>
+     <Address/>
     </div>
   );
 }

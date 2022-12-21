@@ -124,5 +124,85 @@
       "phone": "040-225-41582",
       "website": "www.suresh.cpm"
     }
+  ],
+  "addressInfo": [
+    {
+      "id": 1,
+      "street": "HMT",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "zipcode": "92998-3874",
+      "country": "India"
+    }
+  ],
+  "allUsers": [
+    {
+      "id": 1,
+      "name": "pradeep",
+      "username": "pradeep kumar",
+      "email": "pradeep@gmail.com",
+      "password": "123456",
+      "confirmpassword": "123456"
+    }
+  ],
+  "data": [
+    {
+      "id": 1,
+      "firstName": "Pradeep",
+      "lastName": "kumar",
+      "dateOfBirth": "2022-12-20",
+      "email": "pradeep@gmail.com",
+      "mobile": "123456"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "university": "kakatiya",
+      "institute": "vagdevi",
+      "branch": "IT",
+      "degree": "UG",
+      "status": "completed",
+      "avgCPI": "8.9",
+      "blog": "www.sri.com"
+    },
+    {
+      "id": 2,
+      "university": "Chaitanya autonomos",
+      "institute": "Chaitanya",
+      "branch": "IT",
+      "degree": "UG",
+      "status": "pursuing",
+      "avgCPI": "9",
+      "blog": "chaitanya.in"
+    },
+    {
+      "id": 3,
+      "university": "KU university",
+      "institute": "kakatiya",
+      "branch": "ECE",
+      "degree": "PG",
+      "status": "pursuing",
+      "avgCPI": "7",
+      "blog": "arunIceCreams.in"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "userName": "ramesh",
+      "password": "123456",
+      "email": "ramesh@gmail.com",
+      "gender": "male",
+      "dateOfBirth": "28/05/1985"
+    },
+    {
+      "id": 3,
+      "userName": "ramkrishna",
+      "password": "9999",
+      "email": "Ramkrishna@gamil.com",
+      "gender": "male",
+      "dateOfBirth": "12-06-1985"
+    }
   ]
 }

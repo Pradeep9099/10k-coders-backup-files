@@ -1,10 +1,8 @@
-import Registration from "./Components/Registration";
-
-
+import Person from "./Components/Person";
 function App() {
   return (
     <div className="App">
-     <Registration/>
+      <Person/>
     </div>
   );
 }
