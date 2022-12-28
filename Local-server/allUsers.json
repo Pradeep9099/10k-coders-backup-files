@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "email": "pradeep@gmail.com",
+      "password": "123456",
+      "fname": "pradeep",
+      "lname": "kumar",
+      "id": 1
+    },
+    {
+      "email": "Ramkrishna@gamil.com",
+      "password": "123456",
+      "fname": "ram",
+      "lname": "krishna",
+      "id": 2
+    }
+  ]
+}
