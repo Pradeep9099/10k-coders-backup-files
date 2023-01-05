@@ -6,7 +6,7 @@ class User extends Component {
     this.state = {
       fname: "",
       lname: "",
-      email:"",
+      email: "",
     };
   }
   handleChange(e) {
@@ -14,20 +14,20 @@ class User extends Component {
 
     // console.log(e.target.value);
     // this.setState({fname:e.target.value});
-    var newObject = {...this.state}
+    var newObject = { ...this.state }
     newObject[e.target.name] = e.target.value
     this.setState(newObject)
 
   }
-  
-  addUser=()=>{
-    console.log(this.state) 
+
+  addUser = () => {
+    console.log(this.state)
   }
-  editUser=()=>{
-    var newUser={
+  editUser = () => {
+    var newUser = {
       fname: "Pradeep",
       lname: "Kumar",
-      email:"pradeepkumarpudari@gmail.com",
+      email: "pradeepkumarpudari@gmail.com",
     };
     this.setState(newUser)
   }
@@ -36,11 +36,11 @@ class User extends Component {
       <div>
         <form>
           <label> First Name :</label>
-          <input type="text" name="fname" value={this.state.fname} onChange={(e) => this.handleChange(e)}/><br />
+          <input type="text" name="fname" value={this.state.fname} onChange={(e) => this.handleChange(e)} /><br />
           <label> Last Name :</label>
-          <input type="text" name="lname" value={this.state.lname} onChange={(e)=>this.handleChange(e)} /> <br/>
-         <label> Email :</label>
-          <input type="text" name="email" value={this.state.email} onChange={(e)=>this.handleChange(e)}/> <br/>
+          <input type="text" name="lname" value={this.state.lname} onChange={(e) => this.handleChange(e)} /> <br />
+          <label> Email :</label>
+          <input type="text" name="email" value={this.state.email} onChange={(e) => this.handleChange(e)} /> <br />
           <button type="button" onClick={this.addUser}> Add User</button>
           <button type="button" onClick={this.editUser}>Edit User</button>
         </form>
